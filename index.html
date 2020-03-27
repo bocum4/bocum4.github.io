@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>BOCUMA SOUND ELECTRONICS</title>
-</head>    
-</body>
-    <h1>BOCUMA SOUND ELECTRONICS</h1>
-    <h2>Hacia Nuevos Universos Sonoros</h2>
-    <p>- GDL MX 2020 -</p>
-</body>
-</html>
+---
+layout: default
+---
+
+
+<section class="posts">
+<ul>
+{% for post in site.posts %}
+<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d-%Y" }}</time></li>
+{% endfor %}
+</ul>
+</section>
+
